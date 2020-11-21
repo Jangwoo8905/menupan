@@ -14,29 +14,18 @@ const slide = _ => {
     setInterval(() => {
         pos = (pos + 1) % len // 장면 선택
         target.style.marginLeft = `${-pos * 100}%`
-    }, 1000) // 1500 = 1500ms = 1.5sec. 즉, 1.5초 마다 실행
+    }, 3000) // 1500 = 1500ms = 1.5sec. 즉, 1.5초 마다 실행
 }
+
+
+
+
 window.onload = function () {
     slide()
 }
 
-/*var img=new Array();
 
-
-var interval=1000;
-var n=0;
-var imgs = new Array("../images/conversion/1.png","../images/conversion/2.png","../images/conversion/3.png", "../images/conversion/4.png", "../images/conversion/5.png", "../images/conversion/6.png", "../images/conversion/7.png", "../images/conversion/8.png", "../images/conversion/9.png", "../images/conversion/10.png" );
-function rotate()
-{
-    if(navigator.appName=="Netscape" && document.getElementById)
-    {
-        document.getElementById("slide").src=imgs[n];
-    }
-    else document.images.slide.src=imgs[n];
-    (n==(imgs.length-1))?n=0:n++;
-    setTimeout("rotate()",interval);
-}
-
+/*
 function getdate(){
     document.write('test');
 

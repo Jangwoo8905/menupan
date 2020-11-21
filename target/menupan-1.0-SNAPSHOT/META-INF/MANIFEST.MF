@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
+Built-By: 기용
 Created-By: IntelliJ IDEA
-Built-By: kosmo_13
 Build-Jdk: 1.8.0_265
 
