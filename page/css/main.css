@@ -1,3 +1,18 @@
 body.page-main {
     background-color: #000000;
 }
+
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+.slide{height:200px;overflow:hidden;}
+.slide ul{height:100%;}
+.slide li{height:100%;}
+.slide li:nth-child(1){background:url("../images/conversion/1.png")}
+.slide li:nth-child(2){background:url("../images/conversion/2.png")}
+.slide li:nth-child(3){background:url("../images/conversion/3.png")}
+.slide li:nth-child(4){background:url("../images/conversion/4.png")}
+.slide li:nth-child(5){background:url("../images/conversion/5.png")}
+.slide li:nth-child(6){background:url("../images/conversion/6.png")}
+.slide li:nth-child(7){background:url("../images/conversion/7.png")}
+.slide li:nth-child(8){background:url("../images/conversion/8.png")}
+.slide li:nth-child(9){background:url("../images/conversion/9.png")}
