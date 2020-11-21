@@ -3,9 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<link href ='../css/bootstrap.min.css' rel="stylesheet">
+<script type="text/javascript">
+window.onload = function () {
+    var count = [0, 0, 0];
+    var totalPrice =0;
+    var foodCount0 = document.querySelector("#foodCount0");
+    var foodCount1 = document.querySelector("#foodCount1");
+    var foodCount2 = document.querySelector("#foodCount2");
+    var price = document.querySelector("#price");
+    var btnCharge = document.querySelector("#charge");
+    btnCharge.disabled = true;
+
+    document.querySelector("#food0").onclick =  function () {
+            count[0]++;
+        foodCount0.innerHTML = count[0] + "개";
+        calcPrice();
+        chargeDis();
+        }
+
+    document.querySelector("#food1").onclick =  function () {
+        count[1]++;
+        foodCount1.innerHTML = count[1] + "개";
+        calcPrice();
+        chargeDis();
+    }
+
+    document.querySelector("#food2").onclick =  function () {
+        count[2]++;
+        foodCount2.innerHTML = count[2] + "개";
+        calcPrice();
+        chargeDis();
+    }
+
+    foodCount0.onclick = function (){
+        if(count[0]>0) {
+            count[0]--;
+            this.innerHTML = count[0] + "개";
+            calcPrice();
+            chargeDis();
+        }
+    }
+    foodCount1.onclick = function (){
+        if(count[1]>0) {
+            count[1]--;
+            this.innerHTML = count[1] + "개";
+            calcPrice();
+            chargeDis();
+        }
+    }
+    foodCount2.onclick = function (){
+        if(count[2]>0) {
+            count[2]--;
+            this.innerHTML = count[2] + "개";
+            calcPrice();
+            chargeDis();
+        }
+    }
+
+    function calcPrice(){
+        totalPrice = count[0]*17000+count[1]*18000+count[2]*17000;
+        price.value = totalPrice;
+    }
+
+    btnCharge.onclick = function(){
+
+        var result=confirm(totalPrice+"원 계산하시겠습니까?");
+        if(result){
+            alert(totalPrice+"원 계산되었습니다.")
+        }else {
+            alert("취소되었습니다.")
+        }
+
+    }
+
+    function chargeDis() {
+        btnCharge.disabled = true;
+        if (totalPrice > 0) {
+            btnCharge.disabled = false;
+        }
+    }
+}
+
+
+
+
+
+</script>
 </head>
 <body>
+<<<<<<< HEAD
 <div > </div>
+=======
+<form method = 'post' name="frm" >
+    <table border="2" class='table table-bordered'>
+        <tr>
+            <td>상품명</td> <td>가격</td> <td>수량</td>
+        </tr>
 
+        <tr>
+            <td class="col-md-1" id ="food0" ><img src="./images/도가니수육.png" /></td> <td class="col-md-1">17,000원</td> <td id ="foodCount0"></td>
+        </tr>
+        <tr>
+            <td id ="food1"><img src="./images/매운갈비찜.png" /></td> <td>18,000원</td> <td id ="foodCount1"></td>
+        </tr>
+        <tr>
+            <td id ="food2"><img src="./images/소머리수육.png" /></td> <td>17,000원</td> <td id ="foodCount2"></td>
+        </tr>
+
+
+>>>>>>> origin/master
+
+    </table>
+    <alert class ="alert alert-default" for ='price'> 가격 : </alert>
+    <input type ='text' name="price" id="price"></input>
+    <button class ="btn btn-success" type="botton" name = "charge" id="charge" >계산</button>
+</form>
 </body>
 </html>
