@@ -1,0 +1,42 @@
+@charset "UTF-8";
+	.menu{
+		width:100px; height: 60px;
+		cursor : pointer;
+	}
+	
+	table tr:nth-of-type(odd){
+	font-family: '궁서';
+	font-size: 25px;
+	text-align: center;
+	}
+	table tr:first-of-type{
+	font-size: 32px;
+	}
+	#buy{
+	width: 400px; height : 50px;
+	}
+	#fridehot{
+	width:380px; height:280px;
+	background-image: url(./images/nene.jpg);
+	background-size: cover;
+	background-position: center;
+	}
+	#banbanchicken{
+	width:380px; height:280px;
+	background-image: url(./images/macbanban.JPG);
+	background-size: cover;
+	background-position: center;
+	}
+	#bannoodle{
+	width:380px; height:280px;
+	background-image: url(./images/banbanmyeon.jpg);
+	background-size: cover;
+	background-position: center;
+	}
+	#tang{
+	width:380px; height:280px;
+	background-image: url(./images/tang.jpg);
+	background-size: cover;
+	background-position: center;
+	}
+
