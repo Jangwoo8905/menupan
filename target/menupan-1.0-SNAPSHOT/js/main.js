@@ -18,10 +18,55 @@ const slide = _ => {
 }
 
 
+function change_img(){
+    var btn = document.querySelectorAll(".btn_p");
+    var product = document.getElementsByClassName("product");
+
+    for(let i=0; i<5; i++){
+        btn[i].onclick = function (){
+            for(let i=0; i<5; i++){
+                product[i].style.display='none';
+            }
+            product[i].style.display='block';
+        }
+    }
+}
+
+function go_link(){
+
+    var top = document.getElementsByClassName("top");
+    var shoes = document.getElementsByClassName("shoes");
+    var pant = document.getElementsByClassName("pant");
+    var outer = document.getElementsByClassName("outer");
+    var dress = document.getElementsByClassName("dress");
+
+
+    for(let i=0; i<shoes.length; i++){
+        shoes[i].onclick = function(){
+            window.open("./detailPage.html");
+        }
+        top[i].onclick = function(){
+            window.open("./detailPage.html");
+        }
+        pant[i].onclick = function(){
+            window.open("./detailPage.html");
+        }
+        outer[i].onclick = function(){
+            window.open("./detailPage.html");
+        }
+        dress[i].onclick = function(){
+            window.open("./detailPage.html");
+        }
+    }
+
+
+}
 
 
 window.onload = function () {
-    slide()
+    slide();
+    change_img();
+    go_link();
 }
 
 
